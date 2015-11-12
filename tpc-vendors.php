@@ -24,9 +24,20 @@
 
 define('PLUGIN_DOMAIN', "tpc-vendors");
 
+/**
+ * Get the bootstrap!
+ */
+if ( file_exists(  __DIR__ . '/cmb2/init.php' ) ) {
+  require_once  __DIR__ . '/cmb2/init.php';
+} elseif ( file_exists(  __DIR__ . '/CMB2/init.php' ) ) {
+  require_once  __DIR__ . '/CMB2/init.php';
+}
 
-    
+// Custom Post Type Registration, Settings and Taxonomies
+require( 'inc/register-cpt.php' );   
 
+// Custom Field Functions
+require( 'inc/custom-fields.php' );
 
 
 // Filter the single_template with our custom function 
