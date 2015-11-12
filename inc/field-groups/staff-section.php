@@ -4,14 +4,14 @@ add_action( 'cmb2_admin_init', 'tpcvendors_register_staff_metabox' );
 function tpcvendors_register_staff_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_tpcvendors_infoboxes_';
+	$prefix = '_tpcvendors_staff_';
 
 	/**
 	 * Set Up Metabox
 	 */
 	$cmb_staff = new_cmb2_box( array(
 		'id'            => $prefix . 'metabox',
-		'title'         => __( 'Info Box Section', 'cmb2' ),
+		'title'         => __( 'Staff Member Section', 'cmb2' ),
 		'object_types'  => array( 'vendor', ), // Post type
 		// 'show_on_cb' => 'yourprefix_show_if_front_page', // function should return a bool value
 		// 'context'    => 'normal',
@@ -61,6 +61,10 @@ function tpcvendors_register_staff_metabox() {
 	    'name' => 'Avatar',
 		'id'   => 'avatar',
 		'type' => 'file',
+		 'options' => array(
+	        'url' => false, // Hide the text input for the url
+	        'add_upload_file_text' => 'Add Avatar' // Change upload button text. Default: "Add or Upload File"
+	    ),
 	    // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
 	) );
 
@@ -104,7 +108,7 @@ function tpcvendors_register_staff_metabox() {
 	        'wpautop' => true, // use wpautop?
 	        'media_buttons' => false, // show insert/upload button(s)
 	        'textarea_name' => $editor_id, // set the textarea name to something different, square brackets [] can be used here
-	        'textarea_rows' => get_option('default_post_edit_rows', 5), // rows="..."
+	        'textarea_rows' => get_option('default_post_edit_rows', 8), // rows="..."
 	        'tabindex' => '',
 	        'editor_css' => '', // intended for extra styles for both visual and HTML editors buttons, needs to include the `<style>` tags, can use "scoped".
 	        'editor_class' => '', // add extra class(es) to the editor textarea
