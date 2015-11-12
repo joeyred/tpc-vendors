@@ -25,7 +25,7 @@
 define('PLUGIN_DOMAIN', "tpc-vendors");
 
 /**
- * Get the bootstrap!
+ * Get CMB2 Library
  */
 if ( file_exists(  __DIR__ . '/cmb2/init.php' ) ) {
   require_once  __DIR__ . '/cmb2/init.php';
@@ -36,7 +36,7 @@ if ( file_exists(  __DIR__ . '/cmb2/init.php' ) ) {
 // Custom Post Type Registration, Settings and Taxonomies
 require( 'inc/register-cpt.php' );   
 
-// Custom Field Functions
+// Metaboxes and input fields
 require( 'inc/custom-fields.php' );
 
 
