@@ -44,7 +44,7 @@ require( 'inc/custom-fields.php' );
 add_filter('single_template', 'tpcvendors_custom_single_template');
 
 /**
- * Display custom tempalte for single post
+ * Display custom tempalte for vendor single post
  * 
  * @param  string $single_template Original Path
  * 
