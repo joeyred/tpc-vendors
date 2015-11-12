@@ -51,6 +51,7 @@ function tpcvendors_register_staff_metabox() {
 	        // 'closed'     => true, // true to have the groups closed by default
 	    ),
 	) );
+
 	/**
 	 * Avatar
 	 *
@@ -113,5 +114,5 @@ function tpcvendors_register_staff_metabox() {
 	        'quicktags' => true // load Quicktags, can be used to pass settings directly to Quicktags using an array()
 	    ),
 	) );
-
+}
 	
