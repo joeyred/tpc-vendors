@@ -39,7 +39,7 @@ function tpcvendor_register_custom_post_type() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt' )
+		'supports'           => array( 'title', 'thumbnail', 'excerpt' )
 		//'taxonomies'          => array( 'category', 'post_tag' )
 	);
 	register_post_type( "vendor", $args );
