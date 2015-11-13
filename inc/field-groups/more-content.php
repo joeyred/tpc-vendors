@@ -43,8 +43,8 @@ function tpcvendors_register_additional_content_metabox() {
 	    'description' => __( 'Add more content sections as needed', 'cmb2' ),
 	    'options'     => array(
 	        'group_title'   => __( 'Additional Content Section {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
-	        'add_button'    => __( 'Add Info Box', 'cmb2' ),
-	        'remove_button' => __( 'Remove Info Box', 'cmb2' ),
+	        'add_button'    => __( 'Add Content Section', 'cmb2' ),
+	        'remove_button' => __( 'Remove Content Section', 'cmb2' ),
 	        'sortable'      => true, // beta
 	        // 'closed'     => true, // true to have the groups closed by default
 	    ),
