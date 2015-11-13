@@ -1,6 +1,17 @@
 <?php
+/**
+ * Info Box section metabox and input field creation
+ *
+ * @package TPC Vendors/Metaboxes/Info Box section
+ * @since  0.1.0
+ */
 
 add_action( 'cmb2_admin_init', 'tpcvendors_register_infoboxes_metabox' );
+/**
+ * Build metabox and input fields for infobox section
+ *
+ * @return void
+ */
 function tpcvendors_register_infoboxes_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
@@ -14,10 +25,10 @@ function tpcvendors_register_infoboxes_metabox() {
 		'title'         => __( 'Info Box Section', 'cmb2' ),
 		'object_types'  => array( 'vendor', ), // Post type
 		// 'show_on_cb' => 'yourprefix_show_if_front_page', // function should return a bool value
-		// 'context'    => 'normal',
+		'context'    	=> 'normal',
 		'priority'   	=> 'high',
-		//'show_names' 	=> false, // Show field names on the left
-		//'cmb_styles' 	=> false, // false to disable the CMB stylesheet
+		// 'show_names' 	=> false, // Show field names on the left
+		// 'cmb_styles' 	=> false, // false to disable the CMB stylesheet
 		// 'closed'     => true, // true to keep the metabox closed by default
 	) );
 
@@ -88,6 +99,4 @@ function tpcvendors_register_infoboxes_metabox() {
 		'type' => 'textarea',
 	    // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
 	) );
-
-	
-}	
+}
