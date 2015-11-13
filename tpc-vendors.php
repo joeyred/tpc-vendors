@@ -1,13 +1,12 @@
 <?php
-
 /**
- * Simple Plugin for adding a custom post type for Vendors using theme stylings and built on Foundation for Sites 5.
+ * Simple Plugin for adding a custom post type for Vendors using theme stylings.
  *
  * @package   TPC Vendors
  * @author    Joey Hayes
  * @copyright 2015 Joey Hayes
  * @license   GPL-2.0+
- * @link      https://github.com/joeyred
+ * @link      https://github.com/joeyred/tpc-vendors
  *
  * @wordpress-plugin
  * Plugin Name:       TPC Vendors
@@ -20,9 +19,9 @@
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:       /languages
-*/
+ */
 
-define('PLUGIN_DOMAIN', "tpc-vendors");
+define('PLUGIN_DOMAIN', 'tpc-vendors');
 
 /**
  * Get CMB2 Library
@@ -33,24 +32,28 @@ if ( file_exists(  __DIR__ . '/cmb2/init.php' ) ) {
   require_once  __DIR__ . '/CMB2/init.php';
 }
 
-// Custom Post Type Registration, Settings and Taxonomies
-require( 'inc/register-cpt.php' );   
+/**
+ * Custom Post Type Registration, Settings and Taxonomies
+ */
+require( 'inc/register-cpt.php' );
 
-// Metaboxes and input fields
+/**
+ * Metaboxes and input fields
+ */
 require( 'inc/custom-fields.php' );
 
 
-// Filter the single_template with our custom function 
+// Filter the single_template with our custom function
 add_filter('single_template', 'tpcvendors_custom_single_template');
 
 /**
  * Display custom tempalte for vendor single post
- * 
- * @param  string $single_template Original Path
- * 
+ *
+ * @param  string $single_template Original Path.
+ *
  * @return string                  Ammended Path
  */
-function tpcvendors_custom_single_template( $single_template ){
+function tpcvendors_custom_single_template( $single_template ) {
 
   global $wp_query, $post;
 
@@ -66,10 +69,10 @@ function tpcvendors_custom_single_template( $single_template ){
 
 /**
  * Create shortcode to display searchable vendor archive
- * 
- * @param  array  $atts    attributes passed
- * @param  string $content raw content
- * 
+ *
+ * @param  array  $atts    attributes passed.
+ * @param  string $content raw content.
+ *
  * @return string          buffered content
  */
 function tpcvendors_index_shortcode( $atts, $content = null ) {
@@ -80,7 +83,7 @@ function tpcvendors_index_shortcode( $atts, $content = null ) {
 
 	require( 'templates/vendor-index.php' );
 
-	$content = ob_get_clean(); // Set buffered function to object 
+	$content = ob_get_clean(); // Set buffered function to object
 
 	return $content; // Return object
 

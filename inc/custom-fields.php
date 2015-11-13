@@ -1,4 +1,11 @@
 <?php
+/**
+ * All Metabox files
+ *
+ * @package TPC Vendors/Metaboxes
+ * @since  0.1.0
+ */
+
 // Affiliate Link & CtA Button text
 require( 'field-groups/affiliate-link.php' );
 
