@@ -30,6 +30,7 @@ function tpcvendors_landing_section() {}
  * Infobox markup output
  *
  * @return void
+ * @todo  Section title
  */
 function tpcvendors_infobox_section() {
 
@@ -97,6 +98,7 @@ function tpcvendors_infobox_section() {
  * Infobox markup output
  *
  * @return void
+ * @todo  Section title
  */
 function tpcvendors_staff_section() {
 
@@ -186,4 +188,30 @@ function tpcvendors_staff_section() {
  */
 function tpcvendors_extra_content_section() {
 
+	$entries = get_post_meta( get_the_ID(), '_tpcvendors_additional_content_group', true );
+
+	if ( ! empty( $entries ) ) {
+
+		foreach ( (array) $entries as $key => $entry ) {
+
+			// Store field values in variables to use in markup
+	        if ( isset( $entry['section_title'] ) ) {
+
+	        	$section_title = esc_html( $entry['section_title'] );
+	        }
+
+	        if ( isset( $entry['content'] ) ) {
+
+	        	$content = esc_html( $entry['content'] );
+	        }
+
+	        echo '<div class="extra-content-wrap wrap">'; // Wrap Open
+			echo '<div class="row">'; // Row Open
+			echo '<div class="small-12 columns">';
+			echo '<h1 class="section-title">' . $section_title . '</h1>';
+			echo $content;
+			echo '</div></div></div>' // Wrap, Row, and Column Close
+
+	    }
+	}
 }
