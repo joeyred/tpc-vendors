@@ -7,16 +7,62 @@
  */
 
 /**
- * Displays Image stored via cmb2 file upload
+ * Get image stored via cmb2 file upload
  *
  * @param  string $image_id The field ID of image field.
  * @return string           full image HTML markup
  */
-function tpcvendors_display_image( $image_id ) {
+function tpcvendors_get_image( $image_id ) {
+
+	$image_id .= '_id';
 
 	$image = wp_get_attachment_image( get_post_meta( get_the_ID(), $image_id, 1 ), 'full' );
 
-	echo $image;
+	return $image;
+}
+
+/**
+ * Logo Header Markup
+ */
+function tpcvendors_header_logo() {
+
+    $heading_logo = tpcvendors_get_image( 'vendor_header_image' );
+
+    if ( ! empty($header_logo) ) {
+        ?>
+        <div class="v-logo-wrap">
+	        <div class="row  collapse">
+	            <div class="small-12 columns">
+	                <?php echo $header_logo ?>
+	            </div>   
+	        </div>
+        </div>
+        <?php
+    }
+}
+
+/**
+ * Heading
+ *
+ * @param string $media Media Query specific markup.
+ */
+function tpcvendors_header_heading( $media ) {
+	$heading = get_post_meta( get_the_ID(), 'vendor_heading_text', true );
+
+    if ( $media === 'medium' ) {
+        $markup = '<div class="columns small-12 hide-for-large-up">'
+                . '<h2>' .  $heading . '</h2>'
+                . '</div>';
+    }
+    if ( $media === 'large' ) {
+        $markup = '<h2 class="show-for-large-up">'
+                . $heading
+                . '</h2>';
+    }
+
+    if ( ! empty( $heading ) ) {
+        echo $markup;
+    }
 }
 
 /**
@@ -24,7 +70,41 @@ function tpcvendors_display_image( $image_id ) {
  *
  * @return void
  */
-function tpcvendors_landing_section() {}
+function tpcvendors_landing_section() {
+
+	$entry = array(
+		'heading' => get_post_meta( get_the_ID(), 'vendor_heading_text', true ),
+		'sub_heading' => get_post_meta( get_the_ID(), 'vendor_subheading_wysiwyg', true ),
+		'header_media' => get_post_meta( get_the_ID(), 'vendor_header_media_wysiwyg', true ),
+		'button_text' => get_post_meta( get_the_ID(), 'vendor_header_button_text', true ),
+		);
+
+	if ( isset( $entry['heading'] ) ) {
+
+    	$heading = esc_html( $entry['heading'] );
+	}
+	if ( isset( $entry['sub_heading'] ) ) {
+
+    	$sub_heading = $entry['sub_heading'];
+	}
+	if ( isset( $entry['header_media'] ) ) {
+
+    	$header_media = $entry['header_media'];
+	}
+	if ( isset( $entry['button_text'] ) ) {
+
+    	$button_text = esc_html( $entry['button_text'] );
+	}
+	?>
+	<div class="v-landing-image-bg" style="">
+		<div class="v-landing-wrap wrap full-height-section">
+
+			<?php tpcvendors_header_logo() ?>
+
+		</div>
+	</div>	
+	<?php
+}
 
 /**
  * Infobox markup output
