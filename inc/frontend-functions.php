@@ -24,7 +24,7 @@ function tpcvendors_debugger( $function, $args = '' ) {
  * Get image stored via cmb2 file upload
  *
  * @param  string $id The field ID of image field.
- * @return string           full image HTML markup
+ * @return string     full image HTML markup
  */
 function tpcvendors_get_image( $id ) {
 
