@@ -29,7 +29,7 @@ function tpcvendors_register_staff_metabox() {
 		'priority'   	=> 'default',
 		// 'show_names' 	=> false, // Show field names on the left
 		// 'cmb_styles' 	=> false, // false to disable the CMB stylesheet
-		'closed'     	=> true, // true to keep the metabox closed by default
+		// 'closed'     	=> true, // true to keep the metabox closed by default
 	) );
 
 	/**
@@ -59,7 +59,7 @@ function tpcvendors_register_staff_metabox() {
 	        'add_button'    => __( 'Add Staff Member', 'cmb2' ),
 	        'remove_button' => __( 'Remove Staff Member', 'cmb2' ),
 	        'sortable'      => true, // beta
-	        // 'closed'     	=> true, // true to have the groups closed by default
+	        'closed'     	=> true, // true to have the groups closed by default
 	    ),
 	) );
 
