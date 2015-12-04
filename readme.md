@@ -20,6 +20,13 @@ A basic set up of backend content input and frontend markup building functions. 
 
 As of now there is no archive page tempate.
 
+## Changelog
+
+### 0.1.1
+
+- Section title markup no longer outputs if field is left empty
+- Extra content section title now uses the same markup as the others.
+
 ## Dependancies
 This plugin uses the [CMB2 framework](https://github.com/WebDevStudios/CMB2) for custom metaboxes and input field generation.
 
