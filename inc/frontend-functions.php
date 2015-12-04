@@ -108,9 +108,11 @@ function tpcvendors_button( $id ) {
  */
 function tpcvendors_section_title( $content ) {
 
-	echo '<div class="row"><div class="small-12 columns">';
-	echo '<h1 class="section-title">' . $content . '</h1>';
-	echo '</div></div>';
+	if ( ! empty( $content ) ) {
+		echo '<div class="row"><div class="small-12 columns">';
+		echo '<h1 class="section-title">' . $content . '</h1>';
+		echo '</div></div>';
+	}
 }
 
 /**
@@ -416,9 +418,11 @@ function tpcvendors_extra_content_section() {
 	        }
 
 	        echo '<div class="extra-content-wrap wrap">'; // Wrap Open
+
+	        tpcvendors_section_title( $section_title );
+
 			echo '<div class="row">'; // Row Open
 			echo '<div class="small-12 columns">';
-			echo '<h1 class="section-title">' . $section_title . '</h1>';
 			echo $content;
 			echo '</div></div></div>'; // Wrap, Row, and Column Close
 
