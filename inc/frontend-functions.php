@@ -102,6 +102,7 @@ function tpcvendors_button( $id ) {
 
 /**
  * Section Title Markup
+ * 
  * @param  string $content content to be passed into title.
  * @return void
  */
@@ -185,7 +186,7 @@ function tpcvendors_landing_section() {
 	}
 	?>
 	<div class="v-landing-image-bg" style="">
-		<div class="v-landing-wrap wrap full-height-section">
+		<div class="v-landing-wrap wrap">
 
 			<?php tpcvendors_header_logo() ?>
 
