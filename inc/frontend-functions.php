@@ -108,9 +108,11 @@ function tpcvendors_button( $id ) {
  */
 function tpcvendors_section_title( $content ) {
 
-	echo '<div class="row"><div class="small-12 columns">';
-	echo '<h1 class="section-title">' . $content . '</h1>';
-	echo '</div></div>';
+	if ( ! empty( $content ) ) {
+		echo '<div class="row"><div class="small-12 columns">';
+		echo '<h1 class="section-title">' . $content . '</h1>';
+		echo '</div></div>';
+	}
 }
 
 /**
