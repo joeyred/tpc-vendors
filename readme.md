@@ -24,9 +24,20 @@ As of now there is no archive page tempate.
 
 ### 0.1.1
 
+<<<<<<< HEAD
 - Section title markup no longer outputs if field is left empty
 - Extra content section title now uses the same markup as the others.
 
+=======
+- Section title markup no longer outputs if field is left empty.
+- Extra content section title now uses the same markup as the others.
+
+### 0.1.2
+
+- GitHub Updater meta info added to header comment.
+- readme.txt file added.
+
+>>>>>>> hotfix/0.1.2
 ## Dependancies
 This plugin uses the [CMB2 framework](https://github.com/WebDevStudios/CMB2) for custom metaboxes and input field generation.
 
