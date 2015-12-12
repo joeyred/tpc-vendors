@@ -2,7 +2,7 @@
 /**
  * Header section metabox and input field creation
  *
- * @package TPC Vendors/Metaboxes/Header Section
+ * @package TPC Vendors
  * @since  0.1.0
  */
 

@@ -2,7 +2,7 @@
 /**
  * Staff section metabox and input field creation
  *
- * @package TPC Vendors/Metaboxes/Staff Section
+ * @package TPC Vendors
  * @since  0.1.0
  */
 

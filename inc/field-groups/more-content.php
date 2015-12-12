@@ -2,7 +2,7 @@
 /**
  * More Content metabox and input field creation
  *
- * @package TPC Vendors/Metaboxes/More Content
+ * @package TPC Vendors
  * @since  0.1.0
  */
 

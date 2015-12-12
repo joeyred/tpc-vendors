@@ -2,7 +2,7 @@
 /**
  * Frontend functions
  *
- * @package TPC Vendors/Frontend
+ * @package TPC Vendors
  * @since  0.1.0
  */
 

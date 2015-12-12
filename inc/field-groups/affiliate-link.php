@@ -2,7 +2,7 @@
 /**
  * Affiliate link metabox and input field creation
  *
- * @package TPC Vendors/Metaboxes/Affiliate Link
+ * @package TPC Vendors
  * @since  0.1.0
  */
 

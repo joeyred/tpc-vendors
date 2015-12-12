@@ -2,7 +2,7 @@
 /**
  * Info Box section metabox and input field creation
  *
- * @package TPC Vendors/Metaboxes/Info Box section
+ * @package TPC Vendors
  * @since  0.1.0
  */
 

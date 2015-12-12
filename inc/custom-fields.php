@@ -2,7 +2,7 @@
 /**
  * All Metabox files
  *
- * @package TPC Vendors/Metaboxes
+ * @package TPC Vendors
  * @since  0.1.0
  */
 
