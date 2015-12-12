@@ -2,7 +2,7 @@
 /**
  * Staff section metabox and input field creation
  *
- * @package TPC Vendors/Metaboxes/Staff Section
+ * @package TPC Vendors
  * @since  0.1.0
  */
 
@@ -108,6 +108,8 @@ function tpcvendors_register_staff_metabox() {
 	 * Content
 	 *
 	 * Type: WYSIWYG
+	 *
+	 * @link https://codex.wordpress.org/Function_Reference/wp_editor For Information on editor_id() function
 	 */
 	$cmb_staff->add_group_field( $group_field_id, array(
 	    'name'    => 'Content',
@@ -117,7 +119,6 @@ function tpcvendors_register_staff_metabox() {
 	    'options' => array(
 	        'wpautop' 		=> true, // use wpautop?
 	        'media_buttons' => false, // show insert/upload button(s)
-	        'textarea_name' => $editor_id, // set the textarea name to something different, square brackets [] can be used here
 	        'textarea_rows' => get_option( 'default_post_edit_rows', 8 ), // rows="..."
 	        'tabindex' 		=> '',
 	        'editor_css' 	=> '', // intended for extra styles for both visual and HTML editors buttons, needs to include the `<style>` tags, can use "scoped".
