@@ -77,7 +77,6 @@ function tpcvendors_register_heading_metabox() {
 	    'options' => array(
 	        'wpautop' => true, // use wpautop?
 	        'media_buttons' => false, // show insert/upload button(s)
-	        'textarea_name' => $editor_id, // set the textarea name to something different, square brackets [] can be used here
 	        'textarea_rows' => get_option('default_post_edit_rows', 5), // rows="..."
 	        'tabindex' => '',
 	        'editor_css' => '', // intended for extra styles for both visual and HTML editors buttons, needs to include the `<style>` tags, can use "scoped".
@@ -104,7 +103,6 @@ function tpcvendors_register_heading_metabox() {
 	     'options' => array(
 	        'wpautop' => false, // use wpautop?
 	        'media_buttons' => true, // show insert/upload button(s)
-	        'textarea_name' => $editor_id, // set the textarea name to something different, square brackets [] can be used here
 	        'textarea_rows' => get_option('default_post_edit_rows', 6), // rows="..."
 	        'tabindex' => '',
 	        'editor_css' => '', // intended for extra styles for both visual and HTML editors buttons, needs to include the `<style>` tags, can use "scoped".
