@@ -66,6 +66,8 @@ function tpcvendors_register_heading_metabox() {
 	 * Sub Heading
 	 *
 	 * Type: WYSIWYG
+	 *
+	 * @link https://codex.wordpress.org/Function_Reference/wp_editor For Information on editor_id() function
 	 */
 	$cmb_header->add_field( array(
 	    'name'    => 'Sub Heading',
@@ -91,6 +93,8 @@ function tpcvendors_register_heading_metabox() {
 	 * Header Media
 	 *
 	 * Type: WYSIWYG
+	 *
+	 * @link https://codex.wordpress.org/Function_Reference/wp_editor For Information on editor_id() function
 	 */
 	$cmb_header->add_field( array(
 	    'name'    => 'Header Media',

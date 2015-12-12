@@ -108,6 +108,8 @@ function tpcvendors_register_staff_metabox() {
 	 * Content
 	 *
 	 * Type: WYSIWYG
+	 *
+	 * @link https://codex.wordpress.org/Function_Reference/wp_editor For Information on editor_id() function
 	 */
 	$cmb_staff->add_group_field( $group_field_id, array(
 	    'name'    => 'Content',
