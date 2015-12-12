@@ -2,7 +2,7 @@
 /**
  * Register the custom post type and new taxonomies
  *
- * @package TPC Vendors/Register CPT
+ * @package TPC Vendors
  * @since  0.1.0
  */
 

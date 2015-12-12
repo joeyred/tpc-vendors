@@ -1,16 +1,18 @@
 # TPC Vendors
 
+## **Current Version** 0.1.3
+
 ## Description
 Plugin for Vendor custom post type. Styled via theme and frontend markup built with Foundation for Sites 5 markup structure.
 
 This plugin was built specifically for Tax Preparer Connections.
 
 ## Features
-- Easily create landing pages for vendors.
-- Manage affiliate links from each vendor.
-- Flexible content adding via repeatable modules.
-- Extremely lightweight and styled via theme CSS.
-- Foundation for Sites 5 markup structure.
+* Easily create landing pages for vendors.
+* Manage affiliate links from each vendor.
+* Flexible content adding via repeatable modules.
+* Extremely lightweight and styled via theme CSS.
+* Foundation for Sites 5 markup structure.
 
 ## Release Notes
 
@@ -22,20 +24,21 @@ As of now there is no archive page tempate.
 
 ## Changelog
 
-### 0.1.1
+### 0.1.3
 
-<<<<<<< HEAD
-- Section title markup no longer outputs if field is left empty
-- Extra content section title now uses the same markup as the others.
-
-=======
-- Section title markup no longer outputs if field is left empty.
-- Extra content section title now uses the same markup as the others.
+* `textarea_name` key and value removed from WYSIWYG options array so it defaults to `$editor_id` without creating an `undefined variable` error.
+* DocBlock comments updated for easier future troubleshooting.
+>>>>>>> hotfix/0.1.3
 
 ### 0.1.2
 
-- GitHub Updater meta info added to header comment.
-- readme.txt file added.
+* File header meta edited to allow use with [GitHub Updater](https://github.com/afragen/github*updater).
+* readme.txt file added.
+
+### 0.1.1
+
+* Section title markup no longer outputs if field is left empty.
+* Extra content section title now uses the same markup as the others.
 
 >>>>>>> hotfix/0.1.2
 ## Dependancies
