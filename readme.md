@@ -1,5 +1,7 @@
 # TPC Vendors
 
+## **Current Version** 0.1.3
+
 ## Description
 Plugin for Vendor custom post type. Styled via theme and frontend markup built with Foundation for Sites 5 markup structure.
 

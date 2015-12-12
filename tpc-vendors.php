@@ -12,7 +12,7 @@
  * Plugin Name:       TPC Vendors
  * Plugin URI:        https://github.com/joeyred/tpc-vendors
  * Description:       Simple Plugin for adding a custom post type for Vendors
- * Version:           0.1.2
+ * Version:           0.1.3
  * GitHub Plugin URI: https://github.com/joeyred/tpc-vendors
  * Author:            Joey Hayes
  * Author URI:        https://github.com/joeyred
